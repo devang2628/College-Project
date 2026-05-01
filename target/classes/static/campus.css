@@ -1,0 +1,228 @@
+/* ==========================================================================
+   CAMPUS HERO SECTION
+   ========================================================================== */
+   .campus-hero {
+    position: relative;
+    padding: 160px 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh;
+    overflow: hidden;
+}
+
+.campus-hero .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    /* Adding a blur to differentiate from the home hero */
+    filter: blur(2px) brightness(0.8);
+    transform: scale(1.05); /* Prevents blurred edges from showing */
+}
+
+.campus-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
+    z-index: -1;
+}
+
+.campus-hero-content {
+    max-width: 800px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.campus-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.campus-hero p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* ==========================================================================
+   GENERAL UTILITIES FOR CAMPUS PAGE
+   ========================================================================== */
+.section-padding {
+    padding: 100px 20px;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.active {
+    color: var(--primary-color) !important;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   FACILITIES GALLERY GRID
+   ========================================================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-icon-overlay {
+    height: 200px;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a subtle pattern/overlay to the background of the icon area */
+.gallery-icon-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+    opacity: 0.1;
+}
+
+.gallery-icon-overlay i {
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-icon-overlay i {
+    transform: scale(1.1);
+}
+
+.gallery-info {
+    padding: 30px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.gallery-info h3 {
+    font-size: 1.25rem;
+    color: var(--bg-dark);
+    margin-bottom: 12px;
+}
+
+.gallery-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   STUDENT CLUBS SECTION
+   ========================================================================== */
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.club-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+}
+
+.club-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    transition: var(--transition);
+}
+
+.club-card:hover .club-icon {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.club-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--bg-dark);
+    margin-bottom: 12px;
+}
+
+.club-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .campus-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .campus-hero {
+        min-height: 50vh;
+        padding: 120px 20px 60px;
+    }
+    
+    .gallery-icon-overlay {
+        height: 160px;
+    }
+}

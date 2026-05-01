@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Admission | Nexus University</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="apply.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar Minimal -->
+    <header class="minimal-header">
+        <div class="container header-container">
+            <a href="home.html" class="logo">
+                <i class="ph-fill ph-graduation-cap"></i>
+                Nexus<span>University</span>
+            </a>
+            <a href="home.html" class="btn btn-outline-light btn-sm"><i class="ph ph-x"></i> Cancel</a>
+        </div>
+    </header>
+
+    <main class="apply-main">
+        <div class="container wrapper">
+
+            <!-- Information Sidebar -->
+            <aside class="apply-sidebar fade-in-up">
+                <div class="sidebar-content">
+                    <h2>Join Our Community</h2>
+                    <p>Take the first step towards a brighter future. Complete the application form to begin your
+                        journey at Nexus University.</p>
+
+                    <div class="info-blocks">
+                        <div class="info-block">
+                            <i class="ph-duotone ph-calendar-check"></i>
+                            <div>
+                                <h4>Fall 2026 Intake</h4>
+                                <p>Application deadline: August 15th</p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="ph-duotone ph-file-text"></i>
+                            <div>
+                                <h4>Required Documents</h4>
+                                <p>Previous transcripts, ID proof, and passport-size photo.</p>
+                            </div>
+                        </div>
+                        <div class="info-block">
+                            <i class="ph-duotone ph-headset"></i>
+                            <div>
+                                <h4>Need Help?</h4>
+                                <p>Contact admissions@nexus.edu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Application Form -->
+            <section class="apply-form-section fade-in-up delay-1">
+                <form id="applyForm" action="#" class="apply-form">
+                    <div class="form-header">
+                        <h3>Admission Application</h3>
+                        <p>Please fill out all required fields accurately.</p>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h4 class="section-title">Personal Information</h4>
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" placeholder="John" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" placeholder="Doe" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="john.doe@example.com" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                            </div>
+                            <div class="input-group full-width">
+                                <label for="address">Residential Address *</label>
+                                <textarea id="address" rows="3" placeholder="Enter your full address"
+                                    required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <div class="form-section">
+                        <h4 class="section-title">Academic Details</h4>
+                        <div class="form-grid">
+                            <div class="input-group full-width">
+                                <label for="program">Select Program of Interest *</label>
+                                <div class="select-wrapper">
+                                    <select id="program" required>
+                                        <option value="" disabled selected>Choose a program...</option>
+                                        <option value="bca">BCA (Bachelor of Computer Applications)</option>
+                                        <option value="bba">BBA (Bachelor of Business Administration)</option>
+                                        <option value="mca">MCA (Master of Computer Application) </option>
+                                        <option value="mba">MBA (Master of Business Administration)</option>
+                                        <option value="btech">B.Tech (Engineering)</option>
+                                    </select>
+                                    <i class="ph ph-caret-down"></i>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="prev-school">Previous School/College *</label>
+                                <input type="text" id="prev-school" placeholder="Enter institution name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="percentage">Percentage/CGPA *</label>
+                                <input type="text" id="percentage" placeholder="e.g., 85% or 3.5" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <label class="terms-checkbox">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            I declare that all the information provided is accurate and true to the best of my
+                            knowledge.
+                        </label>
+                        <button type="submit" class="btn btn-primary btn-lg">Submit Application <i
+                                class="ph ph-paper-plane-right"></i></button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('applyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Submitting... <i class="ph ph-spinner ph-spin"></i>';
+            submitBtn.disabled = true;
+
+            const data = {
+                firstName: document.getElementById('first-name').value,
+                lastName: document.getElementById('last-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                program: document.getElementById('program').value,
+                previousSchool: document.getElementById('prev-school').value,
+                percentage: document.getElementById('percentage').value
+            };
+
+            fetch('http://localhost:8080/api/apply', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert(result.message || 'Application submitted successfully!');
+                document.getElementById('applyForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the application.');
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+
+</html>

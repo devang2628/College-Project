@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life | Nexus University</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Experience the vibrant campus life at Nexus University. Explore our state-of-the-art facilities, clubs, and student community.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="campus.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="logo">
+                <i class="ph-fill ph-graduation-cap"></i>
+                Nexus<span>University</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html#about">About</a></li>
+                <li><a href="home.html#courses">Programs</a></li>
+                <li><a href="campus.html" class="active">Campus Life</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Student Portal</a>
+                <a href="apply.html" class="btn btn-primary">Apply Now</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- CAMPUS HERO SECTION -->
+    <header class="campus-hero">
+        <div class="hero-bg" style="background-image: url('college-website.jpg');"></div>
+        <div class="campus-hero-content">
+            <span class="badge fade-in-up">Experience The Extraordinary</span>
+            <h1 class="fade-in-up delay-1">Vibrant <span class="text-gradient">Campus Life</span></h1>
+            <p class="fade-in-up delay-2">More than just classrooms. Discover a thriving community where passion meets
+                opportunity.</p>
+        </div>
+    </header>
+
+    <!-- CAMPUS FACILITIES GALLERY -->
+    <section class="facilities section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">World Class</span>
+                <h2 class="section-title">Our <span>Facilities</span></h2>
+                <p class="section-desc centered-desc">We provide an environment equipped with modern infrastructure to
+                    support your academic and extracurricular pursuits.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Item 1 -->
+                <div class="gallery-item">
+                    <div class="gallery-icon-overlay"><i class="ph-duotone ph-books"></i></div>
+                    <div class="gallery-info">
+                        <h3>Central Library</h3>
+                        <p>Over 100,000 resources, quiet study zones, and digital archives.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item">
+                    <div class="gallery-icon-overlay"><i class="ph-duotone ph-flask"></i></div>
+                    <div class="gallery-info">
+                        <h3>Research Labs</h3>
+                        <p>High-tech laboratories for physics, chemistry, and computer sciences.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item">
+                    <div class="gallery-icon-overlay"><i class="ph-duotone ph-basketball"></i></div>
+                    <div class="gallery-info">
+                        <h3>Sports Complex</h3>
+                        <p>Indoor stadium, Olympic-size pool, and professional coaching.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item">
+                    <div class="gallery-icon-overlay"><i class="ph-duotone ph-coffee"></i></div>
+                    <div class="gallery-info">
+                        <h3>Student Cafeteria</h3>
+                        <p>Healthy, multi-cuisine dining options with comfortable lounge areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENT CLUBS SECTION -->
+    <section class="clubs section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Get Involved</span>
+                <h2 class="section-title">Student <span>Clubs & Societies</span></h2>
+                <p class="section-desc centered-desc">Join a community of like-minded peers and explore your interests
+                    beyond academics.</p>
+            </div>
+
+            <div class="clubs-grid">
+                <div class="club-card">
+                    <div class="club-icon"><i class="ph-fill ph-code"></i></div>
+                    <h4>Tech Innovators Club</h4>
+                    <p>Hackathons, coding bootcamps, and tech talks.</p>
+                </div>
+                <div class="club-card">
+                    <div class="club-icon"><i class="ph-fill ph-palette"></i></div>
+                    <h4>Arts & Culture Society</h4>
+                    <p>Theater, painting, and cultural festivals.</p>
+                </div>
+                <div class="club-card">
+                    <div class="club-icon"><i class="ph-fill ph-chart-line-up"></i></div>
+                    <h4>Entrepreneurship Cell</h4>
+                    <p>Startup incubation, pitch decks, and networking.</p>
+                </div>
+                <div class="club-card">
+                    <div class="club-icon"><i class="ph-fill ph-megaphone"></i></div>
+                    <h4>Debate & MUN</h4>
+                    <p>Public speaking, critical thinking, and global affairs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+        <div class="container text-center cta-content">
+            <h2>Experience It Yourself</h2>
+            <p>Schedule a campus tour today and see what makes Nexus University the perfect place for your future.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary btn-lg">Book a Tour</a>
+                <a href="apply.html" class="btn btn-outline-light btn-lg">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="home.html" class="logo text-white">
+                        <i class="ph-fill ph-graduation-cap"></i>
+                        Nexus<span>University</span>
+                    </a>
+                    <p class="footer-desc">Empowering minds and shaping futures through quality education, innovation,
+                        and a commitment to excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html#about">About Us</a></li>
+                        <li><a href="home.html#courses">Academic Programs</a></li>
+                        <li><a href="apply.html">Admissions</a></li>
+                        <li><a href="campus.html">Campus Life</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="login.html">Student Portal</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">Events Calendar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="ph-fill ph-map-pin"></i> 123 University Ave, Knowledge City, Ed State 10010</li>
+                        <li><i class="ph-fill ph-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="ph-fill ph-envelope"></i> admissions@nexus.edu</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nexus University. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS for Navbar Scroll Effect -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
